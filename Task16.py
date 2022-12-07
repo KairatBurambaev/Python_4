@@ -1,4 +1,3 @@
-import math
 def inputN(inputN):
     while True:
         try:
