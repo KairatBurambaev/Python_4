@@ -2,15 +2,19 @@ import random
 def inputN(inputN):
     while True:
         try:
-            N = int(input(f'{inputN}'))
+            N = int(input(inputN))
             return N
         except ValueError:
             print('Введите число')
+
 N = inputN('Введите число: ')
-new_list =list(range(1,N+1))
-new_list2 = []
-for i in new_list:
-    i = random.randint(1,25)
-    new_list2.append(i)
-new_list2.sort()
-print('случайный список: ',new_list2,'\nнеповторяющиеся элементы: ',set(new_list2))
+
+original_list = [random.randint(1,10) for i in range(N)]
+
+unique_list = []
+for elem in original_list:
+    if elem not in unique_list:
+        unique_list.append(elem)
+
+print('случайный список: ', original_list)
+print('неповторяющиеся элементы: ', unique_list)
