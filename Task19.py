@@ -7,7 +7,6 @@ data.close()
 
 mnogoX1 = mnogoX1[:-2].split('+')
 mnogoX2 = mnogoX2[:-2].split('+')
-mnogoX = mnogoX1 + mnogoX2
 
 one = [i for i in mnogoX1]
 one1 = [i for i in mnogoX2]
