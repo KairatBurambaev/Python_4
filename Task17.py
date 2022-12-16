@@ -9,7 +9,10 @@ def inputN(inputN):
 
 N = inputN('Введите число: ')
 
-original_list = [random.randint(1,10) for i in range(N)]
+def function(x):
+    return random.randint(1,10)
+
+original_list = list(map(function,[i for i in range(N)]))
 
 unique_list = []
 for elem in original_list:
