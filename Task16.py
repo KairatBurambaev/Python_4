@@ -8,6 +8,10 @@ def inputN(inputN):
 
 N = inputN('Введите натуральное число: ')
 
-list_number = [i for i in range(1,N+1) if N % i == 0]
+def function(i):
+    if N % i == 0:
+        return i  
+
+list_number = list(filter(function,[i for i in range(1,N+1)]))
 
 print(list_number)
